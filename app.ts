@@ -166,12 +166,12 @@ let size = Sizes.S
 
 // type Person = Name | Age
 
-// Mình thích dùng type hơn
 
+// quy định kiểu truyền vào
 const handleClick = <Type>(value: Type) => value
 
 let value = 100
-handleClick<string>('100')
+handleClick<number>(value)
 
 /**
  * Class
