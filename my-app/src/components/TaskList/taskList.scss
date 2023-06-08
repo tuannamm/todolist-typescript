@@ -1,0 +1,15 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .todo-btn {
+    display: flex;
+    gap: 2px;
+  }
+}
+.no-task {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}
