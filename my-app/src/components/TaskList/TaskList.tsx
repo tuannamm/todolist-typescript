@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import './taskList.scss'
 import Header from '../Header/header'
@@ -11,6 +11,8 @@ interface TaskListProps {
 const TaskList = (props: TaskListProps) => {
   const { todolist } = props
 
+  const [todoList, setTodoList] = useState<any>(todolist)
+
   const setDoneTask = (id: number) => {
     const newTodoList = todolist.map((task: any) => {
       if (task.id === id) {
@@ -18,9 +20,10 @@ const TaskList = (props: TaskListProps) => {
       }
       return task
     })
+    setTodoList([...newTodoList])
   }
 
-  console.log("Xxx", todolist)
+  console.log(todoList)
 
   return (
     <div>
